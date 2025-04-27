@@ -46,7 +46,7 @@ function urunekle(){
         yeniliste.classList.toggle("alindi");
     };
 
-    // eklediğimiz ürünü silmek için sil butonu ekliyoruz
+    // eklediğimiz ürünü silmek için sil butonu 
     const silbtn = document.createElement("button");
     silbtn.textContent = "sil";
     silbtn.onclick = function(){
@@ -64,7 +64,7 @@ function urunekle(){
     butongrubu.appendChild(alindi);
     butongrubu.appendChild(silbtn);
 
-    // span butonunu li ye ekledik 
+    // span butonunu li ye ekledik
     yeniliste.appendChild(span);
     yeniliste.appendChild(butongrubu);
 
@@ -92,7 +92,7 @@ function tumunuSil() {
     const kayitliUrunler = JSON.parse(localStorage.getItem("urunler"));
     if (!kayitliUrunler) return; // Eğer ürün yoksa çık
 
-    // Her bir ürün için li elementi oluştur
+    // Her ürün için li elementi oluşturduk
     kayitliUrunler.forEach(function(metin) {
         let yeniliste = document.createElement("li");
         yeniliste.style.display = "flex";
@@ -123,7 +123,7 @@ function tumunuSil() {
             if (kalanUrunler.length === 0) {
                 document.getElementById("tumunuSilBtn").style.display = "none";
             }
-            listeyikaydet(); // silince storage güncellesin
+            listeyikaydet(); // silince storage güncellesin diye eklemelyiz
         };
 
         butongrubu.appendChild(alindi);
@@ -136,7 +136,7 @@ function tumunuSil() {
         
     });
 
-    // Eğer kayıtlı ürün varsa, "Tümünü Sil" butonunu göster
+    // Eğer kayıtlı ürün varsa, "Tümünü Sil" butonunu gösterdim
     document.getElementById("tumunuSilBtn").style.display = "inline";
 
     document.getElementById("urunadi").addEventListener("input", function() {
