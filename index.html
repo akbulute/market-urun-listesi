@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alış-veriş Listesi</title>
+<style>
+    body{
+        background-color: wheat;
+    }
+    .alindi {
+        text-decoration: line-through;
+        color: gray;
+    }
+    h2 {
+        color: brown;
+    }
+</style>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h2>Alışveriş Listesi</h2>
+        <input style="width: 300px;" type="text" id="urunadi" placeholder="lütfen ürün adını giriniz">
+        <button type="button" onclick="urunekle()">Ekle</button>
+        <button id="tumunuSilBtn" style="display: none; float:inherit" onclick="tumunuSil()">Tümünü Sil</button>
+    </div>
+
+    <p id="bosmu" style="color:rgb(255, 0, 0)"></p>
+
+    <ul id="urunlistesi">
+        <!-- ürünler buraya gelecek  -->
+    </ul>
+    <script src="alisveris.js"></script>
+</body>
+</html>
